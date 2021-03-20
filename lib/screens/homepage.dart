@@ -1,8 +1,10 @@
 import 'package:Edustart/theme_Data/colors.dart';
+import 'package:Edustart/theme_Data/theme.dart';
 import 'package:Edustart/widgets/drawer.dart';
 import 'package:Edustart/widgets/top_container.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:flutter_svg/svg.dart';
 
 class Homepage extends StatefulWidget {
   @override
@@ -15,6 +17,25 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
+    final join_now = Material(
+      elevation: 5.0,
+      borderRadius: BorderRadius.circular(30.0),
+      color: Color(0xFF05BB8A),
+      child: MaterialButton(
+        // minWidth: 70,
+        padding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
+        onPressed: () {
+          //tode
+        },
+        child: Text("Join Class",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 15,
+              color: Colors.white,
+            )),
+      ),
+    );
+
     return Scaffold(
         key: scaffoldKey,
         body: SafeArea(
@@ -39,9 +60,6 @@ class _HomepageState extends State<Homepage> {
                           child: Icon(Icons.menu,
                               color: LightColors.kDarkBlue, size: 30.0),
                         ),
-
-                        // Icon(Icons.search,
-                        //     color: LightColors.kDarkBlue, size: 25.0),
                       ],
                     ),
                     Padding(
@@ -68,7 +86,7 @@ class _HomepageState extends State<Homepage> {
                             ),
                           ),
                           Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Container(
                                 child: Text(
@@ -98,191 +116,125 @@ class _HomepageState extends State<Homepage> {
                       ),
                     )
                   ])),
-          // Text("Satyam Jaiswal"),
           Expanded(
             child: SingleChildScrollView(
               child: Column(
                 children: [
                   Container(
-                    margin: EdgeInsets.all(15.0),
-                    height: 200.0,
-                    width: double.infinity,
-                    // child: Image.asset(
-                    //   "assets/logo.png",
-                    //   fit: BoxFit.contain,
-                    // ),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(30.0),
-                        boxShadow:
-                            // BoxShadow(color: Colors.black)
-                            [
-                          BoxShadow(
-                              color: Color.fromRGBO(0, 0, 0, 0.1),
-                              // offset: Offset(6.0, 8.0),
-                              blurRadius: 2.0,
-                              spreadRadius: 2.0),
-                          BoxShadow(
-                              color: Color.fromRGBO(0, 0, 0, 0.1),
-                              // offset: Offset(-4.0, -2.0),
-                              blurRadius: 2.0,
-                              spreadRadius: 2.0),
-                        ]),
-                  ),
+                      margin: EdgeInsets.all(15.0),
+                      height: 200.0,
+                      width: double.infinity,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(15, 15, 15, 0),
+                                child: Text(
+                                  "WELCOME BACK,",
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: LightColors.kDarkBlue,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ),
+                              Text(
+                                "Name!",
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                  fontSize: 22.0,
+                                  color: LightColors.kDarkBlue,
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              ),
+                              Container(
+                                  width: 180,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(18.0),
+                                    child: Text(
+                                      "You were working on organic-4 notes when you were last active.",
+                                    ),
+                                  ))
+                            ],
+                          ),
+                          SvgPicture.asset(
+                            "assets/images/books_lover.svg",
+                            height: 150,
+                            width: 150,
+                            // color: Colors.white,
+                          ),
+                        ],
+                      ),
+                      decoration: custBoxdesign),
                   Container(
-                    margin: EdgeInsets.all(15.0),
-                    height: 200.0,
-                    width: double.infinity,
-                    // child: Image.asset(
-                    //   "assets/logo.png",
-                    //   fit: BoxFit.contain,
-                    // ),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(30.0),
-                        boxShadow:
-                            // BoxShadow(color: Colors.black)
-                            [
-                          BoxShadow(
-                              color: Color.fromRGBO(0, 0, 0, 0.1),
-                              // offset: Offset(6.0, 8.0),
-                              blurRadius: 2.0,
-                              spreadRadius: 2.0),
-                          BoxShadow(
-                              color: Color.fromRGBO(0, 0, 0, 0.1),
-                              // offset: Offset(-4.0, -2.0),
-                              blurRadius: 2.0,
-                              spreadRadius: 2.0),
-                        ]),
-                  ),
-                  Container(
-                    margin: EdgeInsets.all(15.0),
-                    height: 200.0,
-                    width: double.infinity,
-                    // child: Image.asset(
-                    //   "assets/logo.png",
-                    //   fit: BoxFit.contain,
-                    // ),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(30.0),
-                        boxShadow:
-                            // BoxShadow(color: Colors.black)
-                            [
-                          BoxShadow(
-                              color: Color.fromRGBO(0, 0, 0, 0.1),
-                              // offset: Offset(6.0, 8.0),
-                              blurRadius: 2.0,
-                              spreadRadius: 2.0),
-                          BoxShadow(
-                              color: Color.fromRGBO(0, 0, 0, 0.1),
-                              // offset: Offset(-4.0, -2.0),
-                              blurRadius: 2.0,
-                              spreadRadius: 2.0),
-                        ]),
-                  )
+                      margin: EdgeInsets.all(15.0),
+                      height: 200.0,
+                      width: double.infinity,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(15, 15, 15, 0),
+                                child: Text(
+                                  "Upcoming Class",
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: LightColors.kDarkBlue,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      "Mathematics -",
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                        fontSize: 14.0,
+                                        color: LightColors.kDarkBlue,
+                                        // fontWeight: FontWeight.w800,
+                                      ),
+                                    ),
+                                    Text(
+                                      " Section G",
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                        fontSize: 14.0,
+                                        color: Colors.orange,
+                                        // fontWeight: FontWeight.w800,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(25.0),
+                                child: join_now,
+                              ),
+                            ],
+                          ),
+                          Image(
+                            image: AssetImage(
+                              'assets/images/try1.png',
+                            ),
+                            height: 120,
+                          )
+                        ],
+                      ),
+                      decoration: custBoxdesign),
                 ],
               ),
             ),
           ),
         ])),
-        drawer: custdrawer()
-
-        //   child: ListView(
-        //     padding: EdgeInsets.zero,
-        //     children: <Widget>[
-        //       DrawerHeader(
-        //         child: Center(
-        //           child: Column(
-        //             children: [
-        //               Padding(
-        //                 padding: const EdgeInsets.all(8.0),
-        //                 child: CircleAvatar(
-        //                   backgroundColor: LightColors.kBlue,
-        //                   radius: 35.0,
-        //                   backgroundImage: AssetImage(
-        //                     'assets/images/avatar.png',
-        //                   ),
-        //                 ),
-        //               ),
-        //               Padding(
-        //                 padding: const EdgeInsets.all(14.0),
-        //                 child: Text("Satyam Jaiswal"),
-        //               )
-        //             ],
-        //           ),
-        //         ),
-        //         decoration: BoxDecoration(
-        //           color: LightColors.kDarkYellow,
-        //         ),
-        //       ),
-        //       ListTile(
-        //         leading: Icon(Icons.calendar_today),
-        //         title: Text('Calendar'),
-        //         onTap: () {
-        //           //TODO
-        //           Navigator.pop(context);
-        //         },
-        //       ),
-        //       ListTile(
-        //         leading: Icon(Icons.assignment),
-        //         title: Text('Assignment'),
-        //         onTap: () {
-        //           //TODO
-        //           Navigator.pop(context);
-        //         },
-        //       ),
-        //       ListTile(
-        //         leading: Icon(Icons.question_answer),
-        //         title: Text('Quiz'),
-        //         onTap: () {
-        //           //TODO
-        //           Navigator.pop(context);
-        //         },
-        //       ),
-        //       ListTile(
-        //         leading: Icon(Icons.ballot_rounded),
-        //         title: Text('Curriculum'),
-        //         onTap: () {
-        //           //TODO
-        //           Navigator.pop(context);
-        //         },
-        //       ),
-        //       ListTile(
-        //         leading: Icon(Icons.help_outline),
-        //         title: Text('Doubts'),
-        //         onTap: () {
-        //           //TODO
-        //           Navigator.pop(context);
-        //         },
-        //       ),
-        //       ListTile(
-        //         leading: Icon(Icons.query_builder_outlined),
-        //         title: Text('Preformance'),
-        //         onTap: () {
-        //           //TODO
-        //           Navigator.pop(context);
-        //         },
-        //       ),
-        //       ListTile(
-        //         leading: Icon(Icons.description),
-        //         title: Text('Lecture Notes'),
-        //         onTap: () {
-        //           //TODO
-        //           Navigator.pop(context);
-        //         },
-        //       ),
-        //       ListTile(
-        //         leading: Icon(Icons.support_agent),
-        //         title: Text('Support desk'),
-        //         onTap: () {
-        //           //TODO
-        //           Navigator.pop(context);
-        //         },
-        //       ),
-        //     ],
-        //   ),
-        // ),
-        );
+        drawer: Custdrawer());
   }
 }

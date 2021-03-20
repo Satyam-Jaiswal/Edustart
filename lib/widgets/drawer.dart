@@ -1,12 +1,13 @@
+import 'package:Edustart/screens/calender.dart';
 import 'package:Edustart/theme_Data/colors.dart';
 import 'package:flutter/material.dart';
 
-class custdrawer extends StatefulWidget {
+class Custdrawer extends StatefulWidget {
   @override
-  _custdrawerState createState() => _custdrawerState();
+  _CustdrawerState createState() => _CustdrawerState();
 }
 
-class _custdrawerState extends State<custdrawer> {
+class _CustdrawerState extends State<Custdrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -42,8 +43,12 @@ class _custdrawerState extends State<custdrawer> {
             leading: Icon(Icons.calendar_today),
             title: Text('Calendar'),
             onTap: () {
-              print("calender is tapped");
               Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CalendarPage()),
+              );
+              print("calender is tapped");
             },
           ),
           ListTile(
