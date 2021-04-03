@@ -1,4 +1,5 @@
-import 'package:Edustart/screens/homepage.dart';
+import 'package:Edustart/screens/Auth/login.dart';
+// import 'package:Edustart/screens/homepage.dart';
 import 'package:Edustart/theme_Data/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
             displayColor: LightColors.kDarkBlue,
             fontFamily: 'Poppins'),
       ),
-      home: Homepage(),
+      home: Login(),
       debugShowCheckedModeBanner: false,
     );
   }

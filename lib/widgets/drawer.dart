@@ -1,4 +1,12 @@
-import 'package:Edustart/screens/calender.dart';
+import 'package:Edustart/screens/assignment_screen.dart';
+import 'package:Edustart/screens/calender_screen.dart';
+import 'package:Edustart/screens/curriculm_screen.dart';
+import 'package:Edustart/screens/doubts_screen.dart';
+import 'package:Edustart/screens/lectureNote_screen.dart';
+import 'package:Edustart/screens/preformance_screen.dart';
+
+import 'package:Edustart/screens/quiz_screen.dart';
+import 'package:Edustart/screens/supportDest.dart';
 import 'package:Edustart/theme_Data/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -55,56 +63,82 @@ class _CustdrawerState extends State<Custdrawer> {
             leading: Icon(Icons.assignment),
             title: Text('Assignment'),
             onTap: () {
-              //TODO
               Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AssigmentScreen()),
+              );
+              print("Assigment is tapped");
             },
           ),
           ListTile(
             leading: Icon(Icons.question_answer),
             title: Text('Quiz'),
             onTap: () {
-              //TODO
               Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => QuizScreen()),
+              );
+              print("Quiz is tapped");
             },
           ),
           ListTile(
             leading: Icon(Icons.ballot_rounded),
             title: Text('Curriculum'),
             onTap: () {
-              //TODO
               Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CurriculumScreen()),
+              );
+              print("Curriculum is tapped");
             },
           ),
           ListTile(
             leading: Icon(Icons.help_outline),
             title: Text('Doubts'),
             onTap: () {
-              //TODO
               Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DoubtsScreen()),
+              );
+              print("Doubts is tapped");
             },
           ),
           ListTile(
             leading: Icon(Icons.query_builder_outlined),
             title: Text('Preformance'),
             onTap: () {
-              //TODO
               Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PreformanceScreen()),
+              );
+              print("Preformance is tapped");
             },
           ),
           ListTile(
             leading: Icon(Icons.description),
             title: Text('Lecture Notes'),
             onTap: () {
-              //TODO
               Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => LectureNoteScreen()),
+              );
             },
           ),
           ListTile(
             leading: Icon(Icons.support_agent),
             title: Text('Support desk'),
             onTap: () {
-              //TODO
               Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SupportScreen()),
+              );
             },
           ),
         ],
